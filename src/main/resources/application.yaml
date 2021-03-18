@@ -1,0 +1,16 @@
+spring:
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  jpa:
+    database: h2
+    hibernate:
+      ddl-auto: create-drop
+    generate-ddl: true
+  datasource:
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    platform: h2
