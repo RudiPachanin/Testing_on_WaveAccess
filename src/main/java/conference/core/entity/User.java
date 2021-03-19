@@ -29,6 +29,9 @@ public class User {
 
     private String password;
 
+    @Enumerated(value = EnumType.STRING)
+    private Role role;
+
     @ManyToMany
     @JoinTable(name = "presentation_user",
             joinColumns = @JoinColumn(name = "user_ID"),

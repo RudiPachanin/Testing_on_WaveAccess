@@ -14,6 +14,6 @@ public interface UserRest {
     ResponseEntity<User> getById(@PathVariable("id") UUID id);
 
     @PostMapping("/api/user/")
-    void addUser(@RequestBody User user);
+    ResponseEntity<User> addUser(@RequestBody User user);
 
 }
