@@ -20,7 +20,13 @@ public class Schedule {
     @GeneratedValue
     private UUID ID;
 
-    private ZonedDateTime timestamp;
+    private ZonedDateTime startSchedule;
+
+    private ZonedDateTime endSchedule;
+
+    private Integer numberRoom;
+
+    private UUID  PresentationID;
 
     @OneToMany
     private List<Presentation> presentations;

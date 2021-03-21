@@ -1,5 +1,6 @@
 package conference.rest;
 
+import conference.core.entity.Schedule;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,5 +14,5 @@ public interface ScheduleRest {
     ResponseEntity<conference.core.entity.Schedule> getById(@PathVariable("id") UUID id);
 
     @PostMapping("/api/schedule/")
-    void addSchedule(@RequestBody conference.core.entity.Schedule schedule);
+    ResponseEntity<Schedule> addSchedule(@RequestBody Schedule schedule);
 }

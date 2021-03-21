@@ -1,11 +1,12 @@
 package conference.repository;
 
 import conference.core.entity.Room;
+import conference.core.entity.Schedule;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
 @Repository
-public interface Schedule extends JpaRepository<Room, UUID> {
+public interface ScheduleRepository extends JpaRepository<Schedule, UUID> {
 }
