@@ -1,11 +1,11 @@
 package conference.dto;
 
+import conference.core.entity.Schedule;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -13,21 +13,17 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class PresentationDto {
+public class RoomDto {
 
     private UUID ID;
 
-    private String name;
+    private Integer numberRoom;
 
-    private ZonedDateTime startDate;
+    private Integer maxPlace;
 
-    private ZonedDateTime endDate;
+    private Integer squareRoom;
 
-    private ZonedDateTime createData;
-
-    private Integer countPage;
+    private Boolean isVideoProjector;
 
     private List<ScheduleDto>scheduleDtos;
-
-
 }

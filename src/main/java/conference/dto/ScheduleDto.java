@@ -1,23 +1,19 @@
-package conference.core.entity;
+package conference.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.time.ZonedDateTime;
-import java.util.List;
 import java.util.UUID;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "schedule_t")
-public class Schedule {
+@Builder
+public class ScheduleDto {
 
-    @Id
-    @GeneratedValue
     private UUID ID;
 
     private ZonedDateTime startSchedule;
@@ -27,7 +23,4 @@ public class Schedule {
     private Integer numberRoom;
 
     private UUID  PresentationID;
-
-    @OneToMany(mappedBy = "schedules")
-    private List<Presentation> presentations;
 }

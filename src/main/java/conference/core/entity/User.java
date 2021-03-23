@@ -37,5 +37,5 @@ public class User {
     @JoinTable(name = "presentation_user",
             joinColumns = @JoinColumn(name = "user_ID"),
             inverseJoinColumns = @JoinColumn(name = "presentation_ID"))
-    private List<Presentation> presentations= new ArrayList<>();
+    private List<Presentation> presentations = new ArrayList<>();
 }

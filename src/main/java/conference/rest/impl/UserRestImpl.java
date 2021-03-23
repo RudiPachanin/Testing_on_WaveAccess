@@ -32,7 +32,7 @@ public class UserRestImpl implements UserRest {
     public ResponseEntity<UserDto> linkToPresentation(UUID userID, UUID presentationID) {
         User user = userService.userLinkPresentation(userID, presentationID);
 
-        UserDto userDto= UserDto.builder()
+        UserDto userDto = UserDto.builder()
                 .ID(user.getID())
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())
@@ -55,7 +55,6 @@ public class UserRestImpl implements UserRest {
         return ResponseEntity.ok(userDto);
 
     }
-
 
 
 }

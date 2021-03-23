@@ -1,6 +1,7 @@
 package conference.rest;
 
 import conference.core.entity.Presentation;
+import conference.dto.PresentationDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,4 +17,6 @@ public interface PresentationRest {
     @PostMapping("/api/presentation/")
     void addPresentation(@RequestBody Presentation presentation);
 
+    @PutMapping("/api/presentation/{presentationID}/link-to-schedule/{scheduleID}")
+    ResponseEntity<PresentationDto> linkToSchedule(@PathVariable("presentationID") UUID presentationID,@PathVariable("scheduleID") UUID scheduleID);
 }

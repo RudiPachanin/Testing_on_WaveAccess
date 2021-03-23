@@ -1,6 +1,7 @@
 package conference.rest;
 
 import conference.core.entity.Room;
+import conference.dto.RoomDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,4 +16,8 @@ public interface RoomRest {
 
     @PostMapping("/api/room/")
     void addRoom(@RequestBody Room room);
+
+    @PutMapping("/api/room/{roomID}/link-to-schedule/{scheduleID}")
+    ResponseEntity<RoomDto> linkToSchedule(@PathVariable UUID roomID, @PathVariable UUID scheduleID);
+
 }

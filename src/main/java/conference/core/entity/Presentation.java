@@ -36,13 +36,14 @@ public class Presentation {
 
     @ManyToOne
     @JoinColumn(name = "schedule_ID")
-    private Schedule schedule;
+    private Schedule schedules;
 
     @ManyToMany
     @JoinTable(name = "presentation_user",
             joinColumns = @JoinColumn(name = "presentation_ID"),
             inverseJoinColumns = @JoinColumn(name = "user_ID"))
     private List<User> users;
+
 
 
 }
