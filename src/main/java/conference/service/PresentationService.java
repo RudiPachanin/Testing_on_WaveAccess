@@ -31,8 +31,8 @@ public class PresentationService {
             Duration duration = Duration.between(presentation.getStartDate(), presentation.getEndDate());
             ZonedDateTime zonedDateTime = presentation1.getStartDate().plus(duration);
 
-            if (zonedDateTime.isBefore(presentation.getStartDate())) {
-            return presentation;
+            if (presentation1.getStartDate().isBefore(presentation.getEndDate())&& presentation.getEndDate().isAfter(presentation1.getStartDate())){
+                return presentation;
             }
         }
 
